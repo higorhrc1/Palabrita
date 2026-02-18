@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabrita</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <div class="logo">
+            <img src="img/Palabrita.png" alt="">
+        </div>
+        <h1>Palabrita</h1>
+    </div>
+    <button class="help-btn" id="helpBtn">?</button>
+</header>
+
+<main>
+    <div id="grid" class="grid"></div>
+
+    <div class="controls">
+        <button id="hintBtn">Dica</button>
+        <button id="restartBtn">Jugar de nuevo</button>
+    </div>
+
+    <div id="keyboard" class="keyboard"></div>
+</main>
+
+<footer>
+    Desenvolvido pela turma Info 2024.1 manhã.
+</footer>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h2>Cómo jugar</h2>
+        <p>Debes adivinar una palabra en español de 5 letras.</p>
+        <p>Tienes 6 intentos para descubrir la palabra secreta.</p>
+        <p>Después de cada intento, las letras cambiarán de color:</p>
+        <p><strong>Verde:</strong> La letra es correcta y está en la posición correcta.</p>
+        <p><strong>Amarillo:</strong> La letra está en la palabra, pero en otra posición.</p>
+        <p><strong>Gris:</strong> La letra no está en la palabra.</p>
+        <p>Escribe una palabra y presiona ENTER para confirmar.</p>
+        <button id="closeModal">Cerrar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

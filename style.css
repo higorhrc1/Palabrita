@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background: #1e293b;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    background: #22c55e;
+    border-radius: 8px;
+}
+
+.help-btn {
+    width: 40px;
+    height: 40px;
+    background: #facc15;
+    border: none;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 5px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 90vw;
+    max-width: 320px;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px, 4vw, 22px);
+    font-weight: bold;
+    background: #1e293b;
+}
+
+
+.green { background: #22c55e; }
+.yellow { background: #eab308; }
+.gray { background: #475569; }
+
+.controls {
+    margin: 15px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    width: 95vw;
+    max-width: 500px;
+}
+
+.key {
+    padding: 10px 0;
+    font-size: clamp(12px, 3.5vw, 18px);
+    background: #334155;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background: #1e293b;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-8px); }
+    80% { transform: translateX(8px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.4s ease;
+  }
+  
+  @media (max-width: 360px) {
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .cell {
+        font-size: 14px;
+    }
+
+    .key {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
