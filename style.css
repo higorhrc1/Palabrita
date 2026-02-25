@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 30px;
+    padding: 15px 30px;
     background: #1e293b;
 }
 
@@ -25,7 +25,6 @@ header {
 .logo img {
     width: 40px;
     height: 40px;
-    background: #22c55e;
     border-radius: 8px;
 }
 
@@ -72,7 +71,6 @@ main {
     background: #1e293b;
 }
 
-
 .green { background: #22c55e; }
 .yellow { background: #eab308; }
 .gray { background: #475569; }
@@ -87,6 +85,10 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+}
+
+#restartBtn {
+    display: none;
 }
 
 .keyboard {
@@ -107,7 +109,7 @@ button {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
     padding: 10px;
     background: #1e293b;
@@ -127,47 +129,36 @@ footer {
     color: black;
     padding: 20px;
     border-radius: 8px;
+    max-width: 300px;
+    text-align: center;
+}
+.admin-list {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.admin-word {
+    cursor: pointer;
+    padding: 3px;
+    display: inline-block;
+}
+
+.admin-word:hover {
+    background: #ddd;
 }
 
 @keyframes shake {
-    0% { transform: translateX(0); }
     20% { transform: translateX(-8px); }
     40% { transform: translateX(8px); }
     60% { transform: translateX(-8px); }
     80% { transform: translateX(8px); }
-    100% { transform: translateX(0); }
-  }
-  
-  .shake {
+}
+
+#restartBtn {
+    display: none;
+}
+
+.shake {
     animation: shake 0.4s ease;
-  }
-  
-  @media (max-width: 360px) {
-
-    header {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        width: 30px;
-        height: 30px;
-    }
-
-    h1 {
-        font-size: 18px;
-    }
-
-    .cell {
-        font-size: 14px;
-    }
-
-    .key {
-        padding: 8px 0;
-        font-size: 12px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 8px;
-    }
 }
